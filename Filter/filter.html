@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./filterOutput.css">
+    <title>Find Tutors</title>
+</head>
+<body>
+   <div class="filter_container">
+    <!--Nav Bar Start-->
+        <div class="home_heading">
+            <div>
+                <a href="#" class="logo">
+                    <img src="../../asset/images/logo.png">
+                    <h1>Cuet Tuitionee</h1>
+                </a>
+            </div>
+            <div class="toggle_nav" onclick="toggle_nav()"></div>
+            <div class="navbar">
+                <ul class="navitems">
+                    <li><a href="../home/home.html">Home</a></li>
+                    <li><a href="#recommended">Recommended</a></li>
+                    <li><a href="#">Find Tutors</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <!--if logged in profile otherwise-->
+                    <li><a href="../signin/signin.html">SIGN IN</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Nav Bar End-->
+        <!---Filter Section Start-->
+        <div class="filter_section">
+            <div class="filter_options">
+                <div class="filter_heading">
+                    <h1>Filter Options</h1>
+                </div>
+                <div class="tuition_type">
+                    <div class="heading_type"><h1>Tution Type</h1></div>
+                    <div class="options_type">
+                        <div><input type="checkbox" name="all" value="all"> <span for="all">All</span></div>
+                        <div><input type="checkbox" name="home" value="home"> <span for="home">Home Tuition</span></div>
+                        <div><input type="checkbox" name="online" value="online"> <span for="online">Online Tuition</span></div>
+                        <div><input type="checkbox" name="group" value="batch"> <span for="batch">Batch Tuition</span></div>
+                    </div>
+                </div>
+                <div class="gender_preference">
+                    <div class="heading_type"><h1>Tution Preference</h1></div>
+                    <div class="options_type">
+                        <div><input type="checkbox" name="all" value="all"> <span for="all">All</span></div>
+                        <div><input type="checkbox" name="male" value="male"><span for="male">Male</span></div>
+                        <div><input type="checkbox" name="female" value="female"><span for="female">Female</span></div>
+                    </div>
+                </div>
+                <div class="location_preference">
+                    <div class="heading_type"><h1>Search By Location</h1></div>
+                    <div class="search_option">
+                        <select name="location">
+                            <option value="all" selected>All</option>
+                            <option value="ranguniya">Ranguniya</option>
+                            <option value="shantirhat">Shantir Hat</option>
+                            <option value="tapbiddut">Tapbiddut</option>
+                            <option value="cuet dormitory">Cuet Dormitory</option>
+                            <option value="pahartoli">Pahartoli</option>
+                            <option value="gourishankar">Gourishankar</option>
+                            <option value="goshci">Goshci</option>
+                            <option value="noapara">Noapara</option>
+                            <option value="khuaish">Khuaish</option>
+                            <option value="rastarmatha">Rastar Matha</option>
+                            <option value="chandgaon">Chandgaon</option>
+                            <option value="bohoddarhat">Bohoddar Hat</option>
+                            <option value="shulukbohor">Shulokbohor</option>
+                            <option value="muradpu">Muradpur</option>
+                            <option value="sholosohor">Sholo Shohor</option>
+                            <option value="2nogate">2no Gate</option>
+                            <option value="oxygen">Oxygen</option>
+                            <option value="Gec">Gec</option>
+                            <option value="khulshi">Khulshi</option>
+                            <option value="dampara">Dampara</option>
+                            <option value="tigerpass">Tiger Pass</option>
+                            <option value="dewyanhat">Dewyan Hat</option>
+                            <option value="eidgah">Eid Gah</option>
+                            <option value="halishohor">Halishohor</option>
+                            <option value="agrabad">Agrabad</option>
+                            <option value="madarbari">Madarbari</option>
+                            <option value="newmarket">New Market</option>
+                            <option value="andorkilla">Andorkillah</option>
+                            <option value="didarmarket">Didar Market</option>
+                            <option value="chawkhbazar">Chawkhbazar</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="payment_preference">
+                    <div class="heading_type">
+                        <h1>Search By Salary Range</h1>
+                    </div>
+                    <div class="search_option">
+    
+                        <select name="salary">
+                            <option value="all" selected>All</option>
+                            <option value="510">5k-10k</option>
+                            <option value="1015">10k-15k</option>
+                            <option value="1520">15k-20k</option>
+                            <option value="20k-25k">20k-25k</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="medium_preference">
+                    <div class="heading_type">
+                        <h1>Search By Academic Type</h1>
+                    </div>
+                    <div class="search_option">
+                        <select name="medium">
+                            <option value="all" selected>All</option>
+                            <option value="banglam">Bangla Medium</option>
+                            <option value="englishv">English Version</option>
+                            <option value="englishm">English Medium</option>
+                            <option value="religious">Religious Studies</option>
+                            <option value="admission">Admission Test</option>
+                            <option value="skills">Professional skill Development</option>
+                            <option value="arts">Arts</option>
+                            <option value="specialskills">Special Skill Development</option>
+                            <option value="university">Univarsity Program</option>
+                            <option value="lang">Language Learning</option>
+                            <option value="examprep">Test Preparation</option>
+                            <option value="madrasa">Madrasa</option>
+                            <option value="Special">Special Child Education</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="filtered_posts">
+                <div class="noofposts">
+                    <div class="showposts">
+                        <p>Shows <span>140</span> post out of <span>1400</span></p>
+                    </div>
+                    <div class="perpageposts">
+                        <label for="pposts">Post Per Page</label>
+                        <select id="pposts">
+                          <option value="5">5</option>
+                          <option value="15" selected>15</option>
+                          <option value="25">25</option>
+                          <option value="35">35</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="posts">
+                    <div class="post">
+                        <div class="post_locid">
+                            <div class="post_loc">
+                                <p><img src="../../asset/images/location.png"> <span>Location Here</span></p>
+                            </div>
+                            <div class="post_id">
+                                <p>Job Id :&nbsp; &nbsp;<span>6digits</span></p>
+                            </div>
+                        </div>
+                        <div class="post_title">
+                            <p>Title Goes Here</p>
+                        </div>
+                        <div class="post_typetime">
+                            <!--Image change hbe type change hole-->
+                            <p class="post_type"><img src="../../asset/images/hometutor.png"> <span>Home</span></p>
+                            <p class="post_time"><img src="../../asset/images/postago.png"><span>8 hours ago</span></p>
+                        </div>
+                        <div class="post_details">
+                            <p><span>Category : </span><span>English Medium</span></p>
+                            <p><span>Class : </span><span>10</span></p>
+                            <p><span>Subjects : </span><span>All</span></p> 
+                        </div>
+                        <div class="post_hire">
+                            <p><span><img src="../../asset/images/salary.png"></span><span>Salary : </span><span>10K</span></p>
+                            <button type="button" ><span><img src="../../asset/images/hire.png"></span>View Details</button>
+                        </div>
+                    </div>   
+                    <div class="post">
+                        <div class="post_locid">
+                            <div class="post_loc">
+                                <p><img src="../../asset/images/location.png"> <span>Location Here</span></p>
+                            </div>
+                            <div class="post_id">
+                                <p>Job Id :&nbsp; &nbsp;<span>6digits</span></p>
+                            </div>
+                        </div>
+                        <div class="post_title">
+                            <p>Title Goes Here</p>
+                        </div>
+                        <div class="post_typetime">
+                            <!--Image change hbe type change hole-->
+                            <p class="post_type"><img src="../../asset/images/onlinetutor.png"> <span>Online</span></p>
+                            <p class="post_time"><img src="../../asset/images/postago.png"><span>8 hours ago</span></p>
+                        </div>
+                        <div class="post_details">
+                            <p><span>Category : </span><span>English Medium</span></p>
+                            <p><span>Class : </span><span>10</span></p>
+                            <p><span>Subjects : </span><span>All</span></p> 
+                        </div>
+                        <div class="post_hire">
+                            <p><span><img src="../../asset/images/salary.png"></span><span>Salary : </span><span>10K</span></p>
+                            <button type="button" ><span><img src="../../asset/images/hire.png"></span>View Details</button>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post_locid">
+                            <div class="post_loc">
+                                <p><img src="../../asset/images/location.png"> <span>Location Here</span></p>
+                            </div>
+                            <div class="post_id">
+                                <p>Job Id :&nbsp; &nbsp;<span>6digits</span></p>
+                            </div>
+                        </div>
+                        <div class="post_title">
+                            <p>Title Goes Here</p>
+                        </div>
+                        <div class="post_typetime">
+                            <!--Image change hbe type change hole-->
+                            <p class="post_type"><img src="../../asset/images/groupstudy.png"> <span>Group</span></p>
+                            <p class="post_time"><img src="../../asset/images/postago.png"><span>8 hours ago</span></p>
+                        </div>
+                        <div class="post_details">
+                            <p><span>Category : </span><span>English Medium</span></p>
+                            <p><span>Class : </span><span>10</span></p>
+                            <p><span>Subjects : </span><span>All</span></p> 
+                        </div>
+                        <div class="post_hire">
+                            <p><span><img src="../../asset/images/salary.png"></span><span>Salary : </span><span>10K</span></p>
+                            <button type="button" ><span><img src="../../asset/images/hire.png"></span>View Details</button>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post_locid">
+                            <div class="post_loc">
+                                <p><img src="../../asset/images/location.png"> <span>Location Here</span></p>
+                            </div>
+                            <div class="post_id">
+                                <p>Job Id :&nbsp; &nbsp;<span>6digits</span></p>
+                            </div>
+                        </div>
+                         <div class="post_title">
+                            <p>Title Goes Here</p>
+                        </div>
+                        <div class="post_typetime">
+                                <!--Image change hbe type change hole-->
+                            <p class="post_type"><img src="../../asset/images/hometutor.png"> <span>Tuition Type</span></p>
+                            <p class="post_time"><img src="../../asset/images/postago.png"><span>8 hours ago</span></p>
+                        </div>
+                        <div class="post_details">
+                            <p><span>Category : </span><span>English Medium</span></p>
+                            <p><span>Class : </span><span>10</span></p>
+                            <p><span>Subjects : </span><span>All</span></p> 
+                        </div>
+                        <div class="post_hire">
+                            <p><span><img src="../../asset/images/salary.png"></span><span>Salary : </span><span>10K</span></p>
+                            <button type="button" ><span><img src="../../asset/images/hire.png"></span>View Details</button>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post_locid">
+                            <div class="post_loc">
+                                <p><img src="../../asset/images/location.png"> <span>Location Here</span></p>
+                            </div>
+                            <div class="post_id">
+                                <p>Job Id :&nbsp; &nbsp;<span>6digits</span></p>
+                            </div>
+                        </div>
+                         <div class="post_title">
+                            <p>Title Goes Here</p>
+                        </div>
+                        <div class="post_typetime">
+                                <!--Image change hbe type change hole-->
+                            <p class="post_type"><img src="../../asset/images/hometutor.png"> <span>Tuition Type</span></p>
+                            <p class="post_time"><img src="../../asset/images/postago.png"><span>8 hours ago</span></p>
+                        </div>
+                        <div class="post_details">
+                            <p><span>Category : </span><span>English Medium</span></p>
+                            <p><span>Class : </span><span>10</span></p>
+                            <p><span>Subjects : </span><span>All</span></p> 
+                        </div>
+                        <div class="post_hire">
+                            <p><span><img src="../../asset/images/salary.png"></span><span>Salary : </span><span>10K</span></p>
+                            <button type="button" ><span><img src="../../asset/images/hire.png"></span>View Details</button>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post_locid">
+                            <div class="post_loc">
+                                <p><img src="../../asset/images/location.png"> <span>Location Here</span></p>
+                            </div>
+                            <div class="post_id">
+                                <p>Job Id :&nbsp; &nbsp;<span>6digits</span></p>
+                            </div>
+                        </div>
+                         <div class="post_title">
+                            <p>Title Goes Here</p>
+                        </div>
+                        <div class="post_typetime">
+                                <!--Image change hbe type change hole-->
+                            <p class="post_type"><img src="../../asset/images/hometutor.png"> <span>Tuition Type</span></p>
+                            <p class="post_time"><img src="../../asset/images/postago.png"><span>8 hours ago</span></p>
+                        </div>
+                        <div class="post_details">
+                            <p><span>Category : </span><span>English Medium</span></p>
+                            <p><span>Class : </span><span>10</span></p>
+                            <p><span>Subjects : </span><span>All</span></p> 
+                        </div>
+                        <div class="post_hire">
+                            <p><span><img src="../../asset/images/salary.png"></span><span>Salary : </span><span>10K</span></p>
+                            <button type="button" ><span><img src="../../asset/images/hire.png"></span>View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_buttons">
+            <div>
+                <button type="button">PREV</button>
+                <button type="button">NEXT</button>
+            </div>
+        </div>
+        <!-- Footer Start-->
+        <div class="home_footer">
+            <div class="platform_details">
+                <div class="logo">
+                        <img src="../../asset/images/logo.png">
+                </div>
+                <div><p>
+                    cuettuitionee.com is a platform where parents, students and tutors can easily connect with each other.
+                    We provide qualified Home/Online tutors to help your child with studies and helping them perform better in exams. 
+                    We are a group of 2,50,000+ Tutors and 30,000+ satisfied parents/students in Dhaka, Chattagram, Rajshahi, Sylhet, Khulna,
+                     Barishal, Rangpur, Mymensingh cities for different academic and professional subjects.
+                </p></div>
+                <div class="contact_foot">
+                    <div class="icon">
+                        <a href="#"><img src="../../asset/images/facebook.png"></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><img src="../../asset/images/new.png"></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><img src="../../asset/images/github.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <h1>Resources</h1>
+                <ul class="items">
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="#recommended">Recommended</a></li>
+                    <li><a href="#">Find Tutors</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <!--if logged in profile otherwise-->
+                    <li><a href="./login.html">SIGN IN</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        <hr/>
+        <div class="policy">
+            <p>Copyright © 2023. Cuet Tuitionee all right reserved</p>
+        </div>
+        <!--Footer End-->
+   </div>
+</body>
+</html>
